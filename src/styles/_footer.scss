@@ -1,0 +1,6 @@
+.footer-container {
+    height: 70px;
+    width: 100vw;
+    background: $primary-color;
+    @include flex(space-evenly, row); 
+}

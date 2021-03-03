@@ -1,0 +1,58 @@
+.intro-container {
+    height: 100vh;
+    width: 100vw;
+    background: 
+        linear-gradient(
+            to bottom,
+            rgba($primary-color, 0.9),
+            rgba($btn-color, 0.9)
+        ),
+        url('../assets//img/intro-bg.jpg');
+    background-size: cover;
+    color: white;
+    @include flex(center, row);
+
+    img {
+        // @include border(red);
+        height: 300px;
+        margin-right: 10px;
+    }
+}
+
+.intro-cursor {
+    height: 72px;
+    width: 2px;
+    background: white;
+    margin-left: 10px;
+    margin-top: 207px;
+    animation: blink .4s linear none infinite;
+}
+
+.section-scroll-down {
+    // @include border(red);
+    position: absolute;
+    top: 90vh;
+    height: 70px;
+    width: 100px;
+    animation: bounce 1.2s ease-in-out none infinite;
+}
+
+@keyframes bounce {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

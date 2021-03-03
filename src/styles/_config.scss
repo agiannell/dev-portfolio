@@ -1,0 +1,29 @@
+@import url("https://use.typekit.net/xsm8ctc.css");
+    // font-family: ubuntu, sans-serif;
+    // font-family: ubuntu-condensed, sans-serif;
+    // font-family: rokkitt, serif;
+
+$primary-color: #05668D;
+$secondary-color: #028090;
+$btn-color: #00A896;
+$btn-hover: #02C39A;
+$light-color: #F0F3BD;
+$header-font: 'rokkitt', serif;
+$body-font: 'ubuntu', sans-serif;
+
+@mixin border($color) {
+    border: 2px dotted $color;
+}
+
+@mixin flex ($justify, $direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

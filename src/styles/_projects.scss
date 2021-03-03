@@ -1,0 +1,24 @@
+.projects-container {
+    height: 70vh;
+    width: 100vw;
+    background: linear-gradient(to right, $primary-color, $secondary-color);
+    @include flex(space-evenly, row);
+}
+
+.projects-highlight {
+    height: 500px;
+    width: 500px;
+    background: 
+        linear-gradient(to right, rgba($btn-color, 0.8), rgba($btn-color, 0.5)),
+        url('../assets/img/projects-1.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    @include flex(center, column);
+}
+
+.project-item {
+    @include border(orange);
+    height: 300px; 
+    width: 300px;
+}

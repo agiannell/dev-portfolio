@@ -1,0 +1,255 @@
+@import url("https://use.typekit.net/xsm8ctc.css");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  display: none;
+}
+
+.intro-container {
+  height: 100vh;
+  width: 100vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 102, 141, 0.9)), to(rgba(0, 168, 150, 0.9))), url("../assets//img/intro-bg.jpg");
+  background: linear-gradient(to bottom, rgba(5, 102, 141, 0.9), rgba(0, 168, 150, 0.9)), url("../assets//img/intro-bg.jpg");
+  background-size: cover;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.intro-container img {
+  height: 300px;
+  margin-right: 10px;
+}
+
+.intro-cursor {
+  height: 72px;
+  width: 2px;
+  background: white;
+  margin-left: 10px;
+  margin-top: 207px;
+  -webkit-animation: blink .4s linear none infinite;
+          animation: blink .4s linear none infinite;
+}
+
+.section-scroll-down {
+  position: absolute;
+  top: 90vh;
+  height: 70px;
+  width: 100px;
+  -webkit-animation: bounce 1.2s ease-in-out none infinite;
+          animation: bounce 1.2s ease-in-out none infinite;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.projects-container {
+  height: 70vh;
+  width: 100vw;
+  background: -webkit-gradient(linear, left top, right top, from(#05668D), to(#028090));
+  background: linear-gradient(to right, #05668D, #028090);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.projects-highlight {
+  height: 500px;
+  width: 500px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 168, 150, 0.8)), to(rgba(0, 168, 150, 0.5))), url("../assets/img/projects-1.jpg");
+  background: linear-gradient(to right, rgba(0, 168, 150, 0.8), rgba(0, 168, 150, 0.5)), url("../assets/img/projects-1.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.project-item {
+  border: 2px dotted orange;
+  height: 300px;
+  width: 300px;
+}
+
+.experience-container {
+  height: 70vh;
+  width: 100vw;
+  background: -webkit-gradient(linear, right top, left top, from(#05668D), to(#028090));
+  background: linear-gradient(to left, #05668D, #028090);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.contact-container {
+  height: 70vh;
+  width: 100vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(#05668D), to(#028090));
+  background: linear-gradient(to bottom, #05668D, #028090);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footer-container {
+  height: 70px;
+  width: 100vw;
+  background: #05668D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.app-container {
+  text-align: center;
+  font-family: "ubuntu", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: white;
+}
+
+h1 {
+  font-family: "rokkitt", serif;
+  font-size: 5rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-family: "rokkitt", serif;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: "rokkitt", serif;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-family: "rokkitt", serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-family: "ubuntu", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h6 {
+  font-family: "ubuntu", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+/*# sourceMappingURL=App.css.map */
