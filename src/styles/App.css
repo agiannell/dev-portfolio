@@ -228,7 +228,6 @@ header {
 }
 
 .skills-container {
-  height: 70vh;
   width: 100vw;
   background: -webkit-gradient(linear, right top, left top, from(#05668D), to(#028090));
   background: linear-gradient(to left, #05668D, #028090);
