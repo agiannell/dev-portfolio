@@ -14,11 +14,66 @@
     background-size: cover;
     background-position: center;
     border-radius: 25px;
-    @include flex(center, column);
+    @include flex(center, row);
+
+    h2 {
+        @include flex(center, row);
+    }
 }
 
 .project-item {
-    @include border(orange);
+    // @include border(orange);
     height: 300px; 
     width: 300px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+        width: 100%;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: $btn-color;
+        opacity: 0;
+        transition: .2s ease-in-out;
+    }
+    
+    &:hover {
+        &::after {
+            top: 0;
+            opacity: 0.9;
+        }
+
+        .project-btn {
+            opacity: 1;
+        }
+    }
+}
+
+.project-btns {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    @include flex(center, row)
+    
+}
+
+.project-btn {
+    margin: 0 30px;
+    opacity: 0;
+    transition: .2s ease-in-out;
+
+    &:hover {
+        color: $light-color;
+    }
 }

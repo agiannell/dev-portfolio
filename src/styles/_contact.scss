@@ -1,6 +1,21 @@
 .contact-container {
-    height: 70vh;
+    height: 50vh;
     width: 100vw;
     background: linear-gradient(to bottom, $primary-color, $secondary-color);
-    @include flex(space-evenly, row); 
+    @include flex(flex-start, column); 
+}
+
+.contact-items {
+    // @include border(red);
+    @include flex(center, row);
+    width: 80%;
+    height: 80%;
+}
+
+.contact-item {
+    margin: 0 100px;
+
+    a {
+        cursor: pointer;
+    }
 }

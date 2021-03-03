@@ -138,19 +138,96 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.projects-highlight h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .project-item {
-  border: 2px dotted orange;
   height: 300px;
   width: 300px;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.experience-container {
+.project-item img {
+  width: 100%;
+}
+
+.project-item::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #00A896;
+  opacity: 0;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.project-item:hover::after {
+  top: 0;
+  opacity: 0.9;
+}
+
+.project-item:hover .project-btn {
+  opacity: 1;
+}
+
+.project-btns {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.project-btn {
+  margin: 0 30px;
+  opacity: 0;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.project-btn:hover {
+  color: #F0F3BD;
+}
+
+.skills-container {
   height: 70vh;
   width: 100vw;
   background: -webkit-gradient(linear, right top, left top, from(#05668D), to(#028090));
@@ -164,23 +241,19 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.contact-container {
-  height: 70vh;
-  width: 100vw;
-  background: -webkit-gradient(linear, left top, left bottom, from(#05668D), to(#028090));
-  background: linear-gradient(to bottom, #05668D, #028090);
+.skills-map {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -188,6 +261,63 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 80%;
+}
+
+.skill-container {
+  margin: 50px 30px;
+}
+
+.skill-container img {
+  height: 120px;
+}
+
+.contact-container {
+  height: 50vh;
+  width: 100vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(#05668D), to(#028090));
+  background: linear-gradient(to bottom, #05668D, #028090);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%;
+  height: 80%;
+}
+
+.contact-item {
+  margin: 0 100px;
+}
+
+.contact-item a {
+  cursor: pointer;
 }
 
 .footer-container {
@@ -214,6 +344,11 @@ header {
   font-family: "ubuntu", sans-serif;
   font-size: 1rem;
   font-weight: 300;
+  color: white;
+}
+
+.app-container a {
+  text-decoration: none;
   color: white;
 }
 
