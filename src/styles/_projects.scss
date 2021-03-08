@@ -5,25 +5,15 @@
     @include flex(space-evenly, column);
 }
 
-.projects-highlight {
-    height: 500px;
-    width: 500px;
-    background: 
-        linear-gradient(to right, rgba($btn-color, 0.8), rgba($btn-color, 0.5)),
-        url('../assets/img/projects-1.jpg');
-    background-size: cover;
-    background-position: center;
-    border-radius: 25px;
-    @include flex(center, row);
-
-    h2 {
-        @include flex(center, row);
-    }
+.project-items-container {
+    // @include border(red);
+    @include flex(space-around, column);
+    width: 90%;
 }
 
 .project-item {
     // @include border(orange);
-    width: 75%;
+    width: 65%;
     margin: 1.5rem 0;
     border-radius: 25px;
     position: relative;
@@ -75,5 +65,23 @@
 
     &:hover {
         color: $light-color;
+    }
+}
+
+@media(min-width: 750px) {
+    .project-items-container {
+        flex-direction: row;
+    }
+
+    .project-item {
+        width: 40%;
+        margin: 1.5rem;
+        max-width: 400px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .project-items-container {
+        max-width: 1000px;
     }
 }

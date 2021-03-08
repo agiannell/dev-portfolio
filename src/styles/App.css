@@ -61,6 +61,18 @@ header {
   cursor: pointer;
 }
 
+.mobile {
+  display: initial;
+}
+
+.tablet {
+  display: none;
+}
+
+.desktop {
+  display: none;
+}
+
 .intro-cursor {
   height: 72px;
   width: 2px;
@@ -78,6 +90,35 @@ header {
   width: 100px;
   -webkit-animation: bounce 1.2s ease-in-out none infinite;
           animation: bounce 1.2s ease-in-out none infinite;
+}
+
+@media (min-width: 750px) {
+  .mobile {
+    display: none;
+  }
+  .tablet {
+    display: initial;
+    margin-top: 1.5rem;
+  }
+  .tablet a {
+    margin: 0 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tablet {
+    display: none;
+  }
+  .desktop {
+    display: initial;
+    margin-top: 2rem;
+  }
+  .desktop a {
+    margin: 0 1.5rem;
+  }
+  .intro-container img {
+    max-width: 1000px;
+  }
 }
 
 @-webkit-keyframes bounce {
@@ -144,47 +185,24 @@ header {
           flex-direction: column;
 }
 
-.projects-highlight {
-  height: 500px;
-  width: 500px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 168, 150, 0.8)), to(rgba(0, 168, 150, 0.5))), url("../assets/img/projects-1.jpg");
-  background: linear-gradient(to right, rgba(0, 168, 150, 0.8), rgba(0, 168, 150, 0.5)), url("../assets/img/projects-1.jpg");
-  background-size: cover;
-  background-position: center;
-  border-radius: 25px;
+.project-items-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.projects-highlight h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
 }
 
 .project-item {
-  width: 75%;
+  width: 65%;
   margin: 1.5rem 0;
   border-radius: 25px;
   position: relative;
@@ -250,6 +268,26 @@ header {
   color: #F0F3BD;
 }
 
+@media (min-width: 750px) {
+  .project-items-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .project-item {
+    width: 40%;
+    margin: 1.5rem;
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-items-container {
+    max-width: 1000px;
+  }
+}
+
 .skills-container {
   width: 100vw;
   padding: 2rem 0;
@@ -289,6 +327,12 @@ header {
   width: 80%;
 }
 
+@media (min-width: 1024px) {
+  .skills-map {
+    max-width: 1100px;
+  }
+}
+
 .skill-container {
   margin: 1.3rem;
 }
@@ -299,6 +343,24 @@ header {
 
 .skill-container h4 {
   font-size: 1.2rem;
+}
+
+@media (min-width: 750px) {
+  .skill-container img {
+    height: 4rem;
+  }
+  .skill-container h4 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skill-container img {
+    height: 5rem;
+  }
+  .skill-container h4 {
+    font-size: 2rem;
+  }
 }
 
 .contact-container {
@@ -347,6 +409,20 @@ header {
   cursor: pointer;
 }
 
+@media (min-width: 750px) {
+  .contact-items {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contact-item {
+    margin: 1.2rem 3rem;
+  }
+}
+
 .footer-container {
   height: 70px;
   width: 100vw;
@@ -364,6 +440,29 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.footer-social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 50%;
+  margin-top: 1rem;
+}
+
+.footer-social-icons a {
+  margin: 0 .7rem;
+  cursor: pointer;
 }
 
 .app-container {
@@ -413,5 +512,9 @@ h6 {
   font-family: "ubuntu", sans-serif;
   font-size: 1rem;
   font-weight: 700;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=App.css.map */

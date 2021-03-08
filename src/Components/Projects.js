@@ -6,18 +6,20 @@ const Projects = props => {
     return (
         <section className='projects-container'>
             <h3>Projects</h3>
-            <section className='project-item'>
-                <img src={ unlockedPreview } alt='unlocked logo' />
-                <section className='project-btns'>
-                    <a href='https://unlockedbudget.com/' className='project-btn'><FaEye size='3rem' />Preview</a>
-                    <a href='https://github.com/agiannell/unlocked-budget-app' className='project-btn'><FaGithub size='3rem' />Github</a>
+            <section className='project-items-container'>
+                <section className='project-item'>
+                    <img src={ unlockedPreview } alt='unlocked logo' />
+                    <section className='project-btns'>
+                        <a href='https://unlockedbudget.com/' className='project-btn'><FaEye size='3rem' />Preview</a>
+                        <a href='https://github.com/agiannell/unlocked-budget-app' className='project-btn'><FaGithub size='3rem' />Github</a>
+                    </section>
                 </section>
-            </section>
-            <section className='project-item'>
-                <img src={ deskjockeyPreview } alt='deskjockey logo'/>
-                <section className='project-btns'>
-                    <a href='https://deskjockey.us/' className='project-btn'><FaEye size='3rem' />Preview</a>
-                    <a href='https://github.com/WR8-Desktop-Dj/wr8-group-project-desktop-dj' className='project-btn'><FaGithub size='3rem' />Github</a>
+                <section className='project-item'>
+                    <img src={ deskjockeyPreview } alt='deskjockey logo'/>
+                    <section className='project-btns'>
+                        <a href='https://deskjockey.us/' className='project-btn'><FaEye size='3rem' />Preview</a>
+                        <a href='https://github.com/WR8-Desktop-Dj/wr8-group-project-desktop-dj' className='project-btn'><FaGithub size='3rem' />Github</a>
+                    </section>
                 </section>
             </section>
         </section>

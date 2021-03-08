@@ -19,3 +19,14 @@
         cursor: pointer;
     }
 }
+
+@media(min-width: 750px) {
+    .contact-items {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .contact-item {
+        margin: 1.2rem 3rem;
+    }
+}

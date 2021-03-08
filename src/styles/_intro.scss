@@ -32,6 +32,18 @@
     }
 }
 
+.mobile {
+    display: initial;
+}
+
+.tablet {
+    display: none;
+}
+
+.desktop {
+    display: none;
+}
+
 .intro-cursor {
     height: 72px;
     width: 2px;
@@ -48,6 +60,40 @@
     height: 70px;
     width: 100px;
     animation: bounce 1.2s ease-in-out none infinite;
+}
+
+@media(min-width: 750px) {
+    .mobile {
+        display: none;
+    }
+
+    .tablet {
+        display: initial;
+        margin-top: 1.5rem;
+
+        a {
+            margin: 0 1rem;
+        }
+    }
+}
+
+@media(min-width: 1024px) {
+    .tablet{
+        display: none;
+    }
+
+    .desktop {
+        display: initial;
+        margin-top: 2rem;
+
+        a {
+            margin: 0 1.5rem;
+        }
+    }
+
+    .intro-container img {
+        max-width: 1000px;
+    }
 }
 
 @keyframes bounce {

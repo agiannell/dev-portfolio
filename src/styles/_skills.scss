@@ -13,3 +13,9 @@
     flex-wrap: wrap;
     width: 80%;
 }
+
+@media(min-width: 1024px) {
+    .skills-map {
+        max-width: 1100px;
+    }
+}
