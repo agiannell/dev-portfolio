@@ -5,9 +5,7 @@ import deskjockeyPreview from '../assets/img/deskjockey-preview.png'
 const Projects = props => {
     return (
         <section className='projects-container'>
-            <section className='projects-highlight'>
-                <h2>projects</h2>
-            </section>
+            <h3>Projects</h3>
             <section className='project-item'>
                 <img src={ unlockedPreview } alt='unlocked logo' />
                 <section className='project-btns'>

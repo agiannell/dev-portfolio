@@ -1,7 +1,12 @@
 .skill-container {
-    margin: 50px 30px;
+    // @include border(orange);
+    margin: 1.3rem;
 
     img {
-        height: 120px;
+        height: 3rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
     }
 }

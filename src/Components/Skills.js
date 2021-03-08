@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Skill from './Skill';
 import react from '../assets/img/skill-icons/react.svg';
 import redux from '../assets/img/skill-icons/redux.svg';
@@ -16,7 +15,7 @@ import sass from '../assets/img/skill-icons/sass.svg';
 import visualStudio from '../assets/img/skill-icons/visual-studio.svg';
 
 const Skills = props => {
-    const [skills, setSkills] = useState([
+    const skills = [
         { name: 'React', img: react  },
         { name: 'Node', img: node  },
         { name: 'Javascript', img: javascript  },
@@ -27,11 +26,11 @@ const Skills = props => {
         { name: 'Git', img: git  },
         { name: 'Github', img: github  },
         { name: 'PostgreSQL', img: postgresql  },
-        { name: 'Visual Studio Code', img: visualStudio  },
+        { name: 'VS Code', img: visualStudio  },
         { name: 'Postman', img: postman  },
         { name: 'Photoshop', img: photoshop  },
         { name: 'Illustrator', img: illustrator  }
-    ])
+    ]
 
     return (
         <section className="skills-container">

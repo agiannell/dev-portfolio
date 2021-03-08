@@ -9,13 +9,26 @@
         ),
         url('../assets//img/intro-bg.jpg');
     background-size: cover;
+    background-position: center;
     color: white;
-    @include flex(center, row);
+    @include flex(center, column);
 
     img {
         // @include border(red);
-        height: 300px;
-        margin-right: 10px;
+        width: 80%;
+    }
+}
+
+.social-icons {
+    // @include border (orange);
+    @include flex (center, row);
+    width: 50%;
+    margin-top: 1rem;
+
+    a {
+        // @include border(green);
+        margin: 0 .7rem;
+        cursor: pointer;
     }
 }
 
