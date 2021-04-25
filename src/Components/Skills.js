@@ -18,6 +18,7 @@ const Skills = props => {
     const skills = [
         { name: 'React', img: react  },
         { name: 'Node', img: node  },
+        { name: 'PostgreSQL', img: postgresql  },
         { name: 'Javascript', img: javascript  },
         { name: 'Redux', img: redux  },
         { name: 'HTML', img: html  },
@@ -25,7 +26,6 @@ const Skills = props => {
         { name: 'Sass', img: sass  },
         { name: 'Git', img: git  },
         { name: 'Github', img: github  },
-        { name: 'PostgreSQL', img: postgresql  },
         { name: 'VS Code', img: visualStudio  },
         { name: 'Postman', img: postman  },
         { name: 'Photoshop', img: photoshop  },
