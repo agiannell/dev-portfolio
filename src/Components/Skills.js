@@ -13,13 +13,19 @@ import postgresql from '../assets/img/skill-icons/postgresql.svg';
 import postman from '../assets/img/skill-icons/postman.svg';
 import sass from '../assets/img/skill-icons/sass.svg';
 import visualStudio from '../assets/img/skill-icons/visual-studio.svg';
+import cSharp from '../assets/img/skill-icons/csharp.svg';
+import typescript from '../assets/img/skill-icons/ts.svg';
+import nextJS from '../assets/img/skill-icons/next-js.svg';
 
 const Skills = props => {
     const skills = [
         { name: 'React', img: react  },
+        { name: 'Next.JS', img: nextJS  },
         { name: 'Node', img: node  },
         { name: 'PostgreSQL', img: postgresql  },
         { name: 'Javascript', img: javascript  },
+        { name: 'Typescript', img: typescript  },
+        { name: 'C#', img: cSharp  },
         { name: 'Redux', img: redux  },
         { name: 'HTML', img: html  },
         { name: 'CSS', img: css  },
