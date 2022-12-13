@@ -1,0 +1,23 @@
+@import './config';
+
+.skillsContainer {
+  // @include border(red);
+  // height: 70vh;
+  width: 100vw;
+  padding: 2rem 0;
+  background: linear-gradient(to left, $primary-color, $secondary-color);
+  @include flex(space-evenly, column); 
+}
+
+.skillsMap {
+  // @include border(yellowgreen);
+  @include flex(center, row);
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+@media(min-width: 1024px) {
+  .skillsMap {
+      max-width: 1100px;
+  }
+}

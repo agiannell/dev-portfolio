@@ -1,0 +1,119 @@
+@import './config';
+
+.introContainer {
+  height: 100vh;
+  width: 100vw;
+  background: 
+      linear-gradient(
+          to bottom,
+          rgba($primary-color, 0.9),
+          rgba($btn-color, 0.9)
+      ),
+      url('/images/intro-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  @include flex(center, column);
+
+  img {
+      // @include border(red);
+      width: 80%;
+  }
+}
+
+.socialIcons {
+  // @include border (orange);
+  @include flex (center, row);
+  width: 50%;
+  margin-top: 1rem;
+
+  a {
+      // @include border(green);
+      margin: 0 .7rem;
+      cursor: pointer;
+  }
+}
+
+.mobile {
+  display: initial;
+}
+
+.tablet {
+  display: none;
+}
+
+.desktop {
+  display: none;
+}
+
+.introCursor {
+  height: 72px;
+  width: 2px;
+  background: white;
+  margin-left: 10px;
+  margin-top: 207px;
+  animation: blink .4s linear none infinite;
+}
+
+.sectionScrollDown {
+  // @include border(red);
+  position: absolute;
+  top: 90vh;
+  height: 70px;
+  width: 100px;
+  animation: bounce 1.2s ease-in-out none infinite;
+}
+
+@media(min-width: 750px) {
+  .mobile {
+      display: none;
+  }
+
+  .tablet {
+      display: initial;
+      margin-top: 1.5rem;
+
+      a {
+          margin: 0 1rem;
+      }
+  }
+}
+
+@media(min-width: 1024px) {
+  .tablet{
+      display: none;
+  }
+
+  .desktop {
+      display: initial;
+      margin-top: 2rem;
+
+      a {
+          margin: 0 1.5rem;
+      }
+  }
+
+  .introContainer img {
+      max-width: 1000px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+      opacity: 0;
+      transform: translateY(-30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}

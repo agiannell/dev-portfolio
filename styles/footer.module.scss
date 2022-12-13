@@ -1,0 +1,22 @@
+@import './config';
+
+.footerContainer {
+  // @include border(red);
+  height: 70px;
+  width: 100vw;
+  background: $primary-color;
+  @include flex(space-evenly, row); 
+}
+
+.footerSocialIcons {
+  // @include border (orange);
+  @include flex (center, row);
+  width: 50%;
+  margin-top: 1rem;
+
+  a {
+      // @include border(green);
+      margin: 0 .7rem;
+      cursor: pointer;
+  }
+}

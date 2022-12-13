@@ -1,0 +1,39 @@
+@import './config';
+
+.contactContainer {
+  width: 100vw;
+  padding: 2rem 0;
+  background: linear-gradient(to bottom, $primary-color, $secondary-color);
+  @include flex(flex-start, column); 
+}
+
+.contactItems {
+  // @include border(red);
+  @include flex(center, column);
+  width: 80%;
+  height: 80%;
+}
+
+.contactItem {
+  // @include border(red);
+  margin: 1.2rem;
+  align-items: center;
+  a {
+      cursor: pointer;
+  }
+}
+
+.contactItemTitle {
+  @include flex(center, row)
+}
+
+@media(min-width: 750px) {
+  .contactItems {
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+
+  .contactItem {
+      margin: 1.2rem 3rem;
+  }
+}

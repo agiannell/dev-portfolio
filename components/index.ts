@@ -1,0 +1,7 @@
+export * from './contact'
+export * from './favicon'
+export * from './footer'
+export * from './intro'
+export * from './projects'
+export * from './skill'
+export * from './skills'

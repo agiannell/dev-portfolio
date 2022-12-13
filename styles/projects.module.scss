@@ -1,0 +1,89 @@
+@import './config';
+
+.projectsContainer {
+  width: 100vw;
+  padding: 2rem 0;
+  background: linear-gradient(to right, $primary-color, $secondary-color);
+  @include flex(space-evenly, column);
+}
+
+.projectItemsContainer {
+  // @include border(red);
+  @include flex(space-around, column);
+  width: 90%;
+}
+
+.projectItem {
+  // @include border(orange);
+  width: 65%;
+  margin: 1.5rem 0;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  img {
+      width: 100%;
+  }
+
+  &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: $btn-color;
+      opacity: 0;
+      transition: .2s ease-in-out;
+  }
+  
+  &:hover {
+      &::after {
+          top: 0;
+          opacity: 0.9;
+      }
+
+      .projectBtn {
+          opacity: 1;
+      }
+  }
+}
+
+.projectBtns {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  @include flex(center, row)
+  
+}
+
+.projectBtn {
+  margin: 0 30px;
+  opacity: 0;
+  transition: .2s ease-in-out;
+
+  &:hover {
+      color: $light-color;
+  }
+}
+
+@media(min-width: 750px) {
+  .projectItemsContainer {
+      flex-direction: row;
+  }
+
+  .projectItem {
+      width: 40%;
+      margin: 1.5rem;
+      max-width: 400px;
+  }
+}
+
+@media(min-width: 1024px) {
+  .projectItemsContainer {
+      max-width: 1000px;
+  }
+}

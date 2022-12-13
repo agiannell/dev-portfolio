@@ -1,0 +1,40 @@
+@import './config';
+
+.skillContainer {
+  // @include border(orange);
+  margin: 1.3rem;
+
+  img {
+      height: 3rem;
+  }
+
+  h4 {
+      font-size: 1.2rem;
+  }
+}
+
+@media(min-width: 750px) {
+  .skillContainer {
+
+      img {
+          height: 4rem;
+      }
+
+      h4 {
+          font-size: 1.5rem;
+      }
+  }
+}
+
+@media(min-width: 1024px) {
+  .skillContainer {
+
+      img {
+          height: 5rem;
+      }
+
+      h4 {
+          font-size: 2rem;
+      }
+  }
+}
