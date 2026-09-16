@@ -13,9 +13,6 @@ export const Intro = () => {
         <a href='https://www.linkedin.com/in/agiannell'>
           <FaLinkedin size='1.5rem' />
         </a>
-        <a href='https://twitter.com/anthonygiannell'>
-          <FaTwitter size='1.5rem' />
-        </a>
         <a href='https://www.facebook.com/agiannell/'>
           <FaFacebook size='1.5rem' />
         </a>
@@ -27,9 +24,6 @@ export const Intro = () => {
         <a href='https://www.linkedin.com/in/agiannell'>
           <FaLinkedin size='2rem' />
         </a>
-        <a href='https://twitter.com/anthonygiannell'>
-          <FaTwitter size='2rem' />
-        </a>
         <a href='https://www.facebook.com/agiannell/'>
           <FaFacebook size='2rem' />
         </a>
@@ -40,9 +34,6 @@ export const Intro = () => {
         </a>
         <a href='https://www.linkedin.com/in/agiannell'>
           <FaLinkedin size='2.5rem' />
-        </a>
-        <a href='https://twitter.com/anthonygiannell'>
-          <FaTwitter size='2.5rem' />
         </a>
         <a href='https://www.facebook.com/agiannell/'>
           <FaFacebook size='2.5rem' />

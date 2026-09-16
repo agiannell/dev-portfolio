@@ -11,9 +11,6 @@ export const Footer = () => {
         <a href='https://www.linkedin.com/in/agiannell'>
           <FaLinkedin size='1.5rem' />
         </a>
-        <a href='https://twitter.com/anthonygiannell'>
-          <FaTwitter size='1.5rem' />
-        </a>
         <a href='https://www.facebook.com/agiannell/'>
           <FaFacebook size='1.5rem' />
         </a>

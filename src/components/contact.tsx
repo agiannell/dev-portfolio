@@ -25,7 +25,7 @@ export const Contact = () => {
             <MdLocationCity size='1.5rem' />
             <h5 style={{ margin: '.5rem 0' }}>Location</h5>
           </div>
-          <p style={{ margin: 0 }}>Boise, ID</p>
+          <p style={{ margin: 0 }}>Minneapolis-Saint Paul, MN</p>
         </div>
       </div>
     </div>
