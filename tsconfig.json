@@ -10,7 +10,7 @@
     "moduleResolution": "bundler",
     "paths": {
       "*": [
-        "./*"
+        "./src/*"
       ]
     },
     "jsx": "react-jsx",
@@ -26,13 +26,19 @@
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
     "skipLibCheck": true,
-    "allowJs": true
+    "allowJs": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
