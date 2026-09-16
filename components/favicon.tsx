@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 export const Favicon = (): JSX.Element => {
   return (
     <>

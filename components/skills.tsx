@@ -1,5 +1,5 @@
 import { Skill } from 'components'
-import { SkillProps } from './types'
+import type { SkillProps } from './types'
 import styles from '../styles/skills.module.scss'
 
 export const Skills = () => {
