@@ -1,4 +1,4 @@
-@import './config';
+@use './config' as *;
 
 .contactContainer {
   width: 100vw;

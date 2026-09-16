@@ -1,4 +1,4 @@
-@import './config';
+@use './config' as *;
 
 .projectsContainer {
   width: 100vw;
