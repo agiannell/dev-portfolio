@@ -1,5 +1,8 @@
-export type SkillProps = {
+import type { IconType } from 'react-icons/lib'
+
+export type SkillCategoryProps = {
   key?: number
-  name: string
-  img: string
+  title: string
+  icon: IconType
+  skills: string[]
 }
