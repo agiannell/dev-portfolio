@@ -1,0 +1,25 @@
+{
+  "name": "dev-portfolio-infra",
+  "version": "1.0.0",
+  "private": true,
+  "bin": {
+    "dev-portfolio-infra": "build/bin/portfolio.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "typecheck": "tsc --noEmit",
+    "cdk": "cdk",
+    "deploy": "yarn --cwd .. build && cdk deploy"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "aws-cdk": "2.1142.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.9.3"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.269.0",
+    "constructs": "^10.8.1"
+  }
+}
