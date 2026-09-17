@@ -1,34 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# dev-portfolio
+
+Anthony Giannell's personal portfolio site, built with [Next.js](https://nextjs.org/) (App Router) and TypeScript.
 
 ## Getting Started
 
-First, run the development server:
+This project uses Node 24 (see `.nvmrc`) and Yarn.
 
 ```bash
-npm run dev
-# or
+nvm use
+yarn install
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the result. The page auto-updates as you edit files under `src/app/` and `src/components/`.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+yarn dev         # start the dev server
+yarn build       # production build
+yarn start       # run the production build
+yarn lint        # eslint .
+yarn typecheck   # tsc --noEmit
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Project structure
 
-## Learn More
+- `src/app/` — routes (`page.tsx` is the only page; `layout.tsx` sets up the shared shell, global styles, and favicon/title metadata)
+- `src/components/` — one component per portfolio section (Intro, Projects, Skills, Contact, Footer), re-exported from `src/components/index.ts`
+- `src/styles/` — one SCSS module per component, plus shared variables/mixins in `src/styles/_config.scss`
+- `infra/` — AWS CDK app (S3 + CloudFront + ACM + Route53) that deploys the static export; a separate package with its own `package.json`/`tsconfig.json`, independent of the app's toolchain
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The site builds via `output: 'export'` (a fully static site — no API routes, no server rendering) and deploys to S3 + CloudFront via the CDK app in `infra/`. Deploys run through the `Deploy` GitHub Actions workflow (`.github/workflows/deploy.yml`), triggered manually (`workflow_dispatch`) rather than automatically on push to `main`.

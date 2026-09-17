@@ -1,0 +1,6 @@
+export * from './contact'
+export * from './footer'
+export * from './intro'
+export * from './projects'
+export * from './skill-category'
+export * from './skills'
