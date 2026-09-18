@@ -57,7 +57,7 @@
   width: 100%;
   z-index: 1;
   @include flex(center, row)
-  
+
 }
 
 .projectBtn {
@@ -67,6 +67,13 @@
 
   &:hover {
       color: $light-color;
+  }
+}
+
+.projectBtnsMulti {
+  .projectBtn {
+      margin: 0 10px;
+      font-size: 0.85rem;
   }
 }
 

@@ -75,6 +75,38 @@ export const Projects = () => {
             </a>
           </section>
         </section>
+        <section className={styles.projectItem}>
+          <img src='/images/amplify-hope-preview.png' alt='amplify hope logo' />
+          <section className={`${styles.projectBtns} ${styles.projectBtnsMulti}`}>
+            <a
+              href='https://amplifyhope.cc/'
+              target='_blank'
+              rel='noreferrer'
+              className={styles.projectBtn}
+            >
+              <FaEye size='2rem' />
+              Preview
+            </a>
+            <a
+              href='https://github.com/amplify-hope/ah-website-ui'
+              target='_blank'
+              rel='noreferrer'
+              className={styles.projectBtn}
+            >
+              <FaGithub size='2rem' />
+              Client
+            </a>
+            <a
+              href='https://github.com/amplify-hope/ah-website-api'
+              target='_blank'
+              rel='noreferrer'
+              className={styles.projectBtn}
+            >
+              <FaGithub size='2rem' />
+              API
+            </a>
+          </section>
+        </section>
       </section>
     </section>
   )
