@@ -84,7 +84,7 @@ export const Projects = () => {
               rel='noreferrer'
               className={styles.projectBtn}
             >
-              <FaEye size='2rem' />
+              <FaEye size='2.3rem' />
               Preview
             </a>
             <a
@@ -93,7 +93,7 @@ export const Projects = () => {
               rel='noreferrer'
               className={styles.projectBtn}
             >
-              <FaGithub size='2rem' />
+              <FaGithub size='2.3rem' />
               Client
             </a>
             <a
@@ -102,7 +102,7 @@ export const Projects = () => {
               rel='noreferrer'
               className={styles.projectBtn}
             >
-              <FaGithub size='2rem' />
+              <FaGithub size='2.3rem' />
               API
             </a>
           </section>
