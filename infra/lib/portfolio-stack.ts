@@ -1,3 +1,5 @@
+import * as fs from 'fs'
+import * as path from 'path'
 import * as cdk from 'aws-cdk-lib'
 import * as s3 from 'aws-cdk-lib/aws-s3'
 import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment'
@@ -10,6 +12,25 @@ import { Construct } from 'constructs'
 
 const DOMAIN_NAME = 'anthonygnl.com'
 const WWW_DOMAIN_NAME = 'www.anthonygnl.com'
+
+const copyHtmlAndTxtFiles = (sourceDir: string, destDir: string) => {
+  fs.rmSync(destDir, { recursive: true, force: true })
+
+  const walk = (dir: string, relativeDir: string) => {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const relativePath = path.join(relativeDir, entry.name)
+      if (entry.isDirectory()) {
+        walk(path.join(dir, entry.name), relativePath)
+      } else if (entry.name.endsWith('.html') || entry.name.endsWith('.txt')) {
+        const destPath = path.join(destDir, relativePath)
+        fs.mkdirSync(path.dirname(destPath), { recursive: true })
+        fs.copyFileSync(path.join(dir, entry.name), destPath)
+      }
+    }
+  }
+
+  walk(sourceDir, '')
+}
 
 export class PortfolioStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
@@ -92,8 +113,11 @@ export class PortfolioStack extends cdk.Stack {
       ],
     })
 
+    const htmlOnlyDir = path.resolve(process.cwd(), '../out-html')
+    copyHtmlAndTxtFiles(path.resolve(process.cwd(), '../out'), htmlOnlyDir)
+
     new s3deploy.BucketDeployment(this, 'HtmlPages', {
-      sources: [s3deploy.Source.asset('../out', { exclude: ['*', '!*.html', '!*.txt'] })],
+      sources: [s3deploy.Source.asset(htmlOnlyDir)],
       destinationBucket: siteBucket,
       distribution,
       distributionPaths: ['/*'],
