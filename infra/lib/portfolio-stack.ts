@@ -35,16 +35,32 @@ export class PortfolioStack extends cdk.Stack {
       region: 'us-east-1',
     })
 
+    const urlRewriteFunction = new cloudfront.Function(this, 'UrlRewriteFunction', {
+      code: cloudfront.FunctionCode.fromFile({ filePath: 'lib/cloudfront-functions/url-rewrite.js' }),
+      runtime: cloudfront.FunctionRuntime.JS_2_0,
+    })
+
     const distribution = new cloudfront.Distribution(this, 'Distribution', {
       defaultRootObject: 'index.html',
       defaultBehavior: {
         origin: origins.S3BucketOrigin.withOriginAccessControl(siteBucket),
         viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
+        functionAssociations: [
+          {
+            function: urlRewriteFunction,
+            eventType: cloudfront.FunctionEventType.VIEWER_REQUEST,
+          },
+        ],
       },
       domainNames: [DOMAIN_NAME, WWW_DOMAIN_NAME],
       certificate,
       priceClass: cloudfront.PriceClass.PRICE_CLASS_100,
       errorResponses: [
+        {
+          httpStatus: 403,
+          responseHttpStatus: 404,
+          responsePagePath: '/404.html',
+        },
         {
           httpStatus: 404,
           responseHttpStatus: 404,
