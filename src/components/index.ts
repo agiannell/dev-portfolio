@@ -1,3 +1,4 @@
+export * from './case-study'
 export * from './contact'
 export * from './footer'
 export * from './intro'

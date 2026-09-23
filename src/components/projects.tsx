@@ -1,4 +1,5 @@
-import { FaGithub, FaEye } from 'react-icons/fa'
+import Link from 'next/link'
+import { FaGithub, FaEye, FaFileAlt } from 'react-icons/fa'
 import styles from '../styles/projects.module.scss'
 
 export const Projects = () => {
@@ -6,6 +7,47 @@ export const Projects = () => {
     <section className={styles.projectsContainer}>
       <h3>Projects</h3>
       <section className={styles.projectItemsContainer}>
+        <section className={styles.projectItem}>
+          <img src='/images/amplify-hope-preview.png' alt='amplify hope logo' />
+          <section className={`${styles.projectBtns} ${styles.projectBtnsMulti}`}>
+            <a
+              href='https://amplifyhope.cc/'
+              target='_blank'
+              rel='noreferrer'
+              className={styles.projectBtn}
+            >
+              <FaEye size='2.3rem' />
+              Preview
+            </a>
+            <a
+              href='https://github.com/amplify-hope/ah-website-ui'
+              target='_blank'
+              rel='noreferrer'
+              className={styles.projectBtn}
+            >
+              <FaGithub size='2.3rem' />
+              Client
+            </a>
+            <a
+              href='https://github.com/amplify-hope/ah-website-api'
+              target='_blank'
+              rel='noreferrer'
+              className={styles.projectBtn}
+            >
+              <FaGithub size='2.3rem' />
+              API
+            </a>
+          </section>
+        </section>
+        <section className={styles.projectItem}>
+          <img src='/images/pluralsight-preview.png' alt='Pluralsight PaaS API platform case study' />
+          <section className={styles.projectBtns}>
+            <Link href='/projects/paas-api' className={styles.projectBtn}>
+              <FaFileAlt size='3rem' />
+              Read Case Study
+            </Link>
+          </section>
+        </section>
         <section className={styles.projectItem}>
           <img src='/images/unlocked-preview.png' alt='unlocked logo' />
           <section className={styles.projectBtns}>
@@ -72,38 +114,6 @@ export const Projects = () => {
             >
               <FaGithub size='3rem' />
               Github
-            </a>
-          </section>
-        </section>
-        <section className={styles.projectItem}>
-          <img src='/images/amplify-hope-preview.png' alt='amplify hope logo' />
-          <section className={`${styles.projectBtns} ${styles.projectBtnsMulti}`}>
-            <a
-              href='https://amplifyhope.cc/'
-              target='_blank'
-              rel='noreferrer'
-              className={styles.projectBtn}
-            >
-              <FaEye size='2.3rem' />
-              Preview
-            </a>
-            <a
-              href='https://github.com/amplify-hope/ah-website-ui'
-              target='_blank'
-              rel='noreferrer'
-              className={styles.projectBtn}
-            >
-              <FaGithub size='2.3rem' />
-              Client
-            </a>
-            <a
-              href='https://github.com/amplify-hope/ah-website-api'
-              target='_blank'
-              rel='noreferrer'
-              className={styles.projectBtn}
-            >
-              <FaGithub size='2.3rem' />
-              API
             </a>
           </section>
         </section>

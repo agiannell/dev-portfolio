@@ -1,0 +1,107 @@
+@use './config' as *;
+
+.pageContainer {
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, $primary-color, $secondary-color);
+  color: white;
+  @include flex(flex-start, column);
+  padding: 3rem 1.5rem 4rem;
+}
+
+.caseStudyContainer {
+  max-width: 780px;
+  width: 100%;
+  font-family: $body-font;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $light-color;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0 0 1.5rem;
+
+  &:hover {
+      color: white;
+  }
+}
+
+.caseStudyHeader {
+  margin-bottom: 2rem;
+
+  h1 {
+      font-family: $header-font;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+  }
+}
+
+.metaList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 3rem;
+  margin: 0 0 1.5rem;
+
+  dt {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: $light-color;
+  }
+
+  dd {
+      margin: 0.15rem 0 0;
+      font-weight: 600;
+  }
+}
+
+.stackRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.stackBadge {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.85rem;
+}
+
+.caseStudySection {
+  margin: 2.25rem 0;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  h2 {
+      font-family: $header-font;
+      font-size: 1.6rem;
+      margin: 0 0 0.75rem;
+  }
+
+  p {
+      line-height: 1.6;
+      margin: 0 0 1rem;
+
+      &:last-child {
+          margin-bottom: 0;
+      }
+  }
+}
+
+@media(min-width: 750px) {
+  .caseStudyHeader h1 {
+      font-size: 3rem;
+  }
+
+  .caseStudySection {
+      padding: 2rem;
+  }
+}
